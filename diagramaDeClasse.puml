@@ -57,8 +57,8 @@ class Item {
     -descricaoItem: String  
 }
 
-pes o-- alu
-Emprestimo o-- Materiais
-Perdido o-- Item
+pes <|-- alu
+Emprestimo <|-- Materiais
+Perdido <|-- Item
 
 @enduml
