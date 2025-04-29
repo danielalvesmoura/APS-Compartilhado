@@ -38,6 +38,7 @@ class "Emprestimo" as emp{
 }
 
 class Perdido {
+    -descricaoItem: String
     -dataCadastro: Date
     -prazoNormativo: Date
     -status: String
@@ -50,14 +51,12 @@ class Relatorio {
     -dataFinal: Date
 }
 
-class Item {
-    -descricaoItem: String  
-}
+class Funcionario
+
 
 pes <|-- alu
-emp <|-- mat
-Perdido <|-- Item
-emp <|-- pes
+emp -- mat
+emp -- alu
 
 
 @enduml
