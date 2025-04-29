@@ -1,38 +1,41 @@
 @startuml   
 
 class "Pessoa" as pes{
-    String nome
-    Int id
-    String telefone
-    String email
+    -String nome
+    -Int id
+    -String telefone
+    -String email
 
-    Void cadastroPessoa()
+    +Void cadastroPessoa()
 }
  
 class "Aluno" as alu{
-    Pessoa pessoa
-    String ra
-    String curso
-    Int serie
-    Boolean validarRA()
+    -Pessoa pessoa
+    -String ra
+    -String curso
+    -Int serie
+
+    +Boolean validarRA()
 }
 
 class "Materiais" as mat{
-    Int id
-    String nome
-    Int quantiaTotal
-    Int quantiaDisponivel
+    -Int id
+    -String nome
+    -Int quantiaTotal
+    -Int quantiaDisponivel
+
+    +cadastro(): void
 }
 
 class "Emprestimo" as emp{
-    Int id
-    Materiais material
-    Pessoa pessoa
-    datetime horaDaRetirada
-    datetime horaDaDevolucao
+    -Int id
+    -Materiais material
+    -Pessoa pessoa
+    -datetime horaDaRetirada
+    -datetime horaDaDevolucao
 
-    Void cadastroEmprestimo()
-    Boolean verificacaoDeDisponibilidade()
+    +Void cadastroEmprestimo()
+    +Boolean verificacaoDeDisponibilidade()
 }
 
 pes o-- alu
