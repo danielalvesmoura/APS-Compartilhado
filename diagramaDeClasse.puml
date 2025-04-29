@@ -46,9 +46,9 @@ class Perdido {
     -Int id
     -String: descricaoItem
     -Date: dataCadastro
-    -Date: prazoNormativo: 
+    -Date: prazoNormativo
     -String: localizacaoAchado
-    -String: b=identificacaoExtra
+    -String: identificacaoExtra
     -String: status
     +excederItem(): void
     +solicitarRecuperacao(): void
