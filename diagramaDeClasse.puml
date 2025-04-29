@@ -36,6 +36,22 @@ class "Emprestimo" as emp{
 
     +Void cadastroEmprestimo()
     +Boolean verificacaoDeDisponibilidade()
+    +devolucao(): void
+    +gerarDocumentoAssinatura(): 
+}
+
+class Perdido {
+    -descricaoItem: String
+    -dataCadastro: Date
+    -prazoNormativo: Date
+    -status: String
+    +excederItem(): void
+    +solicitarRecuperacao(): void
+}
+
+class Relatorio {
+    -dataInicial: Date
+    -dataFinal: Date
 }
 
 pes o-- alu
