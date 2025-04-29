@@ -10,7 +10,6 @@ class "Pessoa" as pes{
 }
  
 class "Aluno" as alu{
-    -Pessoa pessoa
     -String ra
     -String curso
     -Int serie
@@ -29,8 +28,6 @@ class "Materiais" as mat{
 
 class "Emprestimo" as emp{
     -Int id
-    -Materiais material
-    -Pessoa pessoa
     -datetime horaDaRetirada
     -datetime horaDaDevolucao
 
@@ -60,5 +57,7 @@ class Item {
 pes <|-- alu
 Emprestimo <|-- Materiais
 Perdido <|-- Item
+emp <|-- pes
+
 
 @enduml
