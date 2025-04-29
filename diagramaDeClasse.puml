@@ -61,6 +61,7 @@ Pessoa <|-- Aluno
 Pessoa <|-- Funcionario
 Emprestimo -- Materiais
 Emprestimo -- Aluno
+Emprestimo -- Funcionario
 
 
 @enduml
