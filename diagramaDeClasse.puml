@@ -33,31 +33,31 @@ class Materiais {
 
 class Emprestimo{
     -Int id
-    -datetime horaDaRetirada
-    -datetime horaDaDevolucao
+    -Date horaDaRetirada
+    -Date horaDaDevolucao
 
     +Void cadastroEmprestimo()
     +Boolean verificacaoDeDisponibilidade()
     +devolucao(): void
-    +gerarDocumentoAssinatura(): 
+    +gerarDocumentoAssinatura(): void
 }
 
 class Perdido {
-    -id
-    -descricaoItem: String
-    -dataCadastro: Date
-    -prazoNormativo: Date
-    -localizacaoAchado: String
-    -identificacaoExtra: String
-    -status: String
+    -Int id
+    -String: descricaoItem
+    -Date: dataCadastro
+    -Date: prazoNormativo: 
+    -String: localizacaoAchado
+    -String: b=identificacaoExtra
+    -String: status
     +excederItem(): void
     +solicitarRecuperacao(): void
 }
 
 class Relatorio {
-    -dataInicial: Date
-    -dataFinal: Date
-    -Formato: String
+    -Date: dataInicial
+    -Date: dataFinal
+    -String: Formato
     -gerarRelatorio(): void
 }
 
