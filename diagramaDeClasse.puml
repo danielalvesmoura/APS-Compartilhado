@@ -41,7 +41,6 @@ class "Emprestimo" as emp{
 }
 
 class Perdido {
-    -descricaoItem: String
     -dataCadastro: Date
     -prazoNormativo: Date
     -status: String
@@ -54,7 +53,12 @@ class Relatorio {
     -dataFinal: Date
 }
 
+class Item {
+    -descricaoItem: String  
+}
+
 pes o-- alu
-Emprestimo o-- Material
+Emprestimo o-- Materiais
+Perdido o-- Item
 
 @enduml
