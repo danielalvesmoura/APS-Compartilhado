@@ -1,6 +1,6 @@
 @startuml   
 
-class "Pessoa" as pes{
+class Pessoa { 
     -String nome
     -Int id
     -String telefone
@@ -9,7 +9,7 @@ class "Pessoa" as pes{
     +Void cadastroPessoa()
 }
  
-class "Aluno" as alu{
+class Aluno {
     -String ra
     -String curso
     -Int serie
@@ -22,7 +22,7 @@ class Funcionario {
     -siap: String
 }
 
-class "Materiais" as mat{
+class Materiais {
     -Int id
     -String nome
     -Int quantiaTotal
@@ -31,7 +31,7 @@ class "Materiais" as mat{
     +cadastro(): void
 }
 
-class "Emprestimo" as emp{
+class Emprestimo{
     -Int id
     -datetime horaDaRetirada
     -datetime horaDaDevolucao
@@ -57,11 +57,10 @@ class Relatorio {
 }
 
 
-
-
-pes <|-- alu
-emp -- mat
-emp -- alu
+Pessoa <|-- Aluno
+Pessoa <|-- Funcionario
+Emprestimo -- Materiais
+Emprestimo -- Aluno
 
 
 @enduml
