@@ -17,6 +17,11 @@ class "Aluno" as alu{
     +Boolean validarRA()
 }
 
+class Funcionario {
+    -cargo: String
+    -siap: String
+}
+
 class "Materiais" as mat{
     -Int id
     -String nome
@@ -51,7 +56,7 @@ class Relatorio {
     -dataFinal: Date
 }
 
-class Funcionario
+
 
 
 pes <|-- alu
