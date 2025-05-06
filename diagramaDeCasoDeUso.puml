@@ -5,7 +5,7 @@ left to right direction
 actor "Usuário" as user
 actor "Administrador" as admi
 
-rectangle "Auxiliar o Edmar na gestão de Empréstimos Escolares e Achados e Perdidos" {
+rectangle "Auxiliar os assistentes na gestão de Empréstimos Escolares e Achados e Perdidos" {
     rectangle "Empréstimo de material" {
         usecase "Solicitação de empréstimo de material" as caso01
         usecase "Solicitar extensão do período de empréstimo" as caso02
@@ -15,7 +15,7 @@ rectangle "Auxiliar o Edmar na gestão de Empréstimos Escolares e Achados e Per
         usecase "Verificar estoque de materiais" as caso05
         usecase "Busca de materiais no estoque" as caso06
 
-        usecase "Solicitar a usuário a devolução de material" as caso07
+        usecase "Solicitar a devolução de material" as caso07
         usecase "Cadastrar material ao catálogo" as caso08
         usecase "Cadastrar pedido de empréstimo" as caso09
         usecase "Exportar o catálogo de um período de tempo arbitrário" as caso0a
@@ -34,12 +34,12 @@ rectangle "Auxiliar o Edmar na gestão de Empréstimos Escolares e Achados e Per
     }
     user --> caso01
     user --> caso05
-    user --caso06
+    user --> caso06
     user --> caso11
+    user --> caso07
 
-    admi -> user
+    admi --> user
 
-    admi --> caso07
     admi --> caso08
     admi --> caso09
     admi --> caso0a
