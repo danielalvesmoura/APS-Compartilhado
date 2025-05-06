@@ -28,7 +28,7 @@ class Materiais {
     -Int quantiaTotal
     -Int quantiaDisponivel
 
-    +cadastro(): void
+    +Void cadastro()
 }
 
 class Emprestimo{
@@ -38,8 +38,8 @@ class Emprestimo{
 
     +Void cadastroEmprestimo()
     +Boolean verificacaoDeDisponibilidade()
-    +devolucao(): void
-    +gerarDocumentoAssinatura(): void
+    +Void devolucao()
+    +Void gerarDocumentoAssinatura()
 }
 
 class Perdido {
@@ -50,15 +50,15 @@ class Perdido {
     -String: localizacaoAchado
     -String: b=identificacaoExtra
     -String: status
-    +excederItem(): void
-    +solicitarRecuperacao(): void
+    +Void excederItem()
+    +Void solicitarRecuperacao()
 }
 
 class Relatorio {
     -Date: dataInicial
     -Date: dataFinal
     -String: Formato
-    -gerarRelatorio(): void
+    -Void gerarRelatorio()
 }
 
 
