@@ -18,8 +18,8 @@ class Aluno {
 }
 
 class Funcionario {
-    -cargo: String
-    -siap: String
+    -String cargo
+    -String siap
 }
 
 class Materiais {
