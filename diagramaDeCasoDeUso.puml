@@ -1,22 +1,51 @@
-@startuml
-skinparam actorPosition top
+@startuml usecase
+skinparam actorPosition left
 left to right direction
 
 actor "Usuário" as user
-actor "Edmar" as Edmar
+actor "Administrador" as admi
 
 rectangle "Auxiliar o Edmar na gestão de Empréstimos Escolares e Achados e Perdidos" {
     rectangle "Empréstimo de material" {
-        usecase "Solicitação de empréstimo de material"
-        usecase "Realizar devolução"
-        usecase "Solicitar extensão do período de empréstimo"
-        usecase "Solicitar a leva do item para casa"
+        usecase "Solicitação de empréstimo de material" as caso01
+        usecase "Solicitar extensão do período de empréstimo" as caso02
+        usecase "Solicitar a leva do item para casa" as caso03
+        usecase "Agendar período de empréstimo" as caso04
+
+        usecase "Verificar estoque de materiais" as caso05
+        usecase "Busca de materiais no estoque" as caso06
+
+        usecase "Solicitar a usuário a devolução de material" as caso07
+        usecase "Cadastrar material ao catálogo" as caso08
+        usecase "Cadastrar pedido de empréstimo" as caso09
+        usecase "Exportar o catálogo de um período de tempo arbitrário" as caso0a
+
+        caso01 <.. caso04:<extends>
+        caso01 <.. caso03:<extends>
+        caso03 .> caso02:<extends>
+        
     }
 
     rectangle "Achados e perdidos" {
+        usecase "Verificar materiais perdidos" as caso11
+        usecase "Cadastrar materiais perdidos" as caso12
+        usecase "Exportar o catálogo de um período de tempo arbitrário" as caso13
 
     }
-    
+    user --> caso01
+    user --> caso05
+    user --caso06
+    user --> caso11
+
+    admi -> user
+
+    admi --> caso07
+    admi --> caso08
+    admi --> caso09
+    admi --> caso0a
+    admi --> caso12
+    admi --> caso13
+
 
 }
 @enduml
