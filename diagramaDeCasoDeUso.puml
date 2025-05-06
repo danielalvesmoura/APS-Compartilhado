@@ -19,10 +19,13 @@ rectangle "Auxiliar os assistentes na gestão de Empréstimos Escolares e Achado
         usecase "Cadastrar material ao catálogo" as caso08
         usecase "Cadastrar pedido de empréstimo" as caso09
         usecase "Exportar o catálogo de um período de tempo arbitrário" as caso0a
+        usecase "Escolher formato do relatório" as caso0b
+        usecase "Enviar pedido de empréstimo para secretaria" as caso0c
 
-        caso01 <.. caso04:<extends>
+        caso01 <.. caso04:<includes>
         caso01 <.. caso03:<extends>
         caso03 .> caso02:<extends>
+        caso0a ..> caso0b:<includes>
         
     }
 
@@ -30,19 +33,21 @@ rectangle "Auxiliar os assistentes na gestão de Empréstimos Escolares e Achado
         usecase "Verificar materiais perdidos" as caso11
         usecase "Cadastrar materiais perdidos" as caso12
         usecase "Exportar o catálogo de um período de tempo arbitrário" as caso13
-
+        usecase "Solicitar retirada de item" as caso14
     }
     user --> caso01
     user --> caso05
     user --> caso06
     user --> caso11
     user --> caso07
+    user --> caso14
 
     admi --> user
 
     admi --> caso08
     admi --> caso09
     admi --> caso0a
+    admi --> caso0c
     admi --> caso12
     admi --> caso13
 
