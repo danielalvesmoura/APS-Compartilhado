@@ -14,12 +14,14 @@ class Usuario {
     -String curso
     -Int serie
 
-    +Boolean validarRA()
+    +Boolean validarRa()
 }
 
 class Administrador {
     -String cargo
     -String siap
+
+    +Boolean validarSiap()
 }
 
 class Materiais {
