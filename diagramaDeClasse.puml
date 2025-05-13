@@ -9,7 +9,7 @@ class Pessoa {
     +Void cadastroPessoa()
 }
  
-class Usuário {
+class Usuario {
     -String ra
     -String curso
     -Int serie
@@ -62,10 +62,10 @@ class Relatorio {
 }
 
 
-Pessoa <|-- Usuário
+Pessoa <|-- Usuario
 Pessoa <|-- Administrador
 Emprestimo -- Materiais
-Emprestimo -- Usuário
+Emprestimo -- Usuario
 Emprestimo -- Administrador
 Perdido -- Relatorio
 Emprestimo -- Relatorio
