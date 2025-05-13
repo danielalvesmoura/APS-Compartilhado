@@ -9,7 +9,7 @@ class Pessoa {
     +Void cadastroPessoa()
 }
  
-class Aluno {
+class Usuário {
     -String ra
     -String curso
     -Int serie
@@ -17,7 +17,7 @@ class Aluno {
     +Boolean validarRA()
 }
 
-class Funcionario {
+class Administrador {
     -String cargo
     -String siap
 }
@@ -62,11 +62,11 @@ class Relatorio {
 }
 
 
-Pessoa <|-- Aluno
-Pessoa <|-- Funcionario
+Pessoa <|-- Usuário
+Pessoa <|-- Administrador
 Emprestimo -- Materiais
-Emprestimo -- Aluno
-Emprestimo -- Funcionario
+Emprestimo -- Usuário
+Emprestimo -- Administrador
 Perdido -- Relatorio
 Emprestimo -- Relatorio
 
