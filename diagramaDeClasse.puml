@@ -67,6 +67,7 @@ Pessoa <|-- Funcionario
 Emprestimo -- Materiais
 Emprestimo -- Aluno
 Emprestimo -- Funcionario
-
+Perdido -- Relatorio
+Emprestimo -- Relatorio
 
 @enduml
